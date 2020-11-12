@@ -37,17 +37,15 @@ app.post("/", (req, res) => {
   items.push(item);
   res.redirect("/");
   }
-  
+
 });
 
 app.get("/work", (req, res) => {
   res.render("list", {listTitle: "Work List", newListItems: workItems});
 });
 
-app.post("/work", (res, req) => {
-  let item = req.body.newItem;
-  workItems.push(item);
-  res.redirect("/work");
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 
